@@ -1,0 +1,15 @@
+<div class="card mb-3">
+    <div class="card-header">
+      <h5>{{ contact.firstName }} {{ contact.lastName }}</h5>
+    </div>
+    <div class="card-body">
+      <p><strong>Phone:</strong> {{ contact.phone }}</p>
+      <p><strong>Email:</strong> {{ contact.email }}</p>
+    </div>
+    <div class="card-footer text-center">
+      <!-- Edit and Delete buttons -->
+      <button class="btn btn-primary mr-2" [routerLink] = "['edit', contact.id]">Edit</button>
+      <button class="btn btn-danger" (click)="deleteContact(contact.id)">Delete</button>
+    </div>
+  </div>
+  
